@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Product
 
 
-class ProductSerializer(serializers.Serializer):
+class ProductSerializer(serializers.HyperlinkedModelSerializer):
     # for image serializer--- for relative path
     image = serializers.ImageField(
         max_length=None, allow_empty_file=False, allow_null=True, required=False)
